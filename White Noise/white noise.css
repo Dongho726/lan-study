@@ -1,0 +1,23 @@
+h1 {
+    font-style: oblique;
+    padding: 30px;
+    border-bottom: 1px solid RGB(0,32,96);
+}
+a {
+    color: black; 
+    font-size: larger;
+}
+img {
+    margin-top: 15px; 
+    width: 500px; 
+    height: 400px;
+}
+#none {margin: 0;}
+#grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+@media(max-width: 800px){
+    #grid {display: block;}
+    h1 {border-bottom: none;}
+}
