@@ -1,32 +1,51 @@
 body{
     margin: 0;
 }
-a{
-    color:black;
-    text-decoration: none;
-}
 h1{
     font-size: 50px;
     text-align: center;
-    border-bottom: 1px solid black;
-    margin: 0;
-    padding: 20px
+    margin: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    background-color: RGB(0,32,96);
+    font-style: oblique;
+    font-weight: bold;
 }
-#join{
-    border-bottom: 1px solid black;
-    margin: 0;
-    padding: 20px;
+a{
+    text-decoration: none;
+    color: black;
+}
+#into{
+    display: grid;
+    font-size: 17px;
+    text-align: right;
+    padding-right: 30px;
+    background-color: RGB(0,32,96);
+    font-style: oblique;
+    margin: 0px;
 }
 #grid{
     display:grid;
     grid-template-columns: 150px 1fr;
 }
-#grid ol{
-    border-right: 1px solid black;
-    padding-left: 30px;
-    margin: 0;
-    padding: 20px;
+#grid li{
+    display: block;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px 70px;
+    width: 90px;
+    height: 40px;
+    font-size: 20px;
+    font-style: oblique;
+    text-align: center;
 }
 #grid #grid2{
-    padding-left: 20px;
+    padding-left: 200px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+li:hover{
+    background-color: RGB(208,220,240);
 }
