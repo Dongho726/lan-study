@@ -11,6 +11,8 @@ const chatRouter = require('./routes/chat');
 const streamRouter = require('./routes/stream');
 const liveRouter = require('./routes/live');
 const whitenoiseRouter = require('./routes/whitenoise');
+const todolistRouter = require('./routes/todolist');
+const ddayRouter = require('./routes/dday');
 
 const app = express();
 
@@ -34,6 +36,8 @@ app.use('/chat', chatRouter);
 app.use('/stream', streamRouter);
 app.use('/live', liveRouter);
 app.use('/whitenoise',whitenoiseRouter);
+app.use('/todolist',todolistRouter);
+app.use('/dday',ddayRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

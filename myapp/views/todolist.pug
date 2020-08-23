@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Tasks
+  form.js-toDoForm
+    input(type='text', placeholder='Add a task')
+  h2 Pending
+  ul.js-toDoPending
+  h2 Finished
+  ul.js-toFinished
+  script(src='/scripts/todolist.js')

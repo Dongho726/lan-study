@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 D-Day
+  form.dDayDate
+    | d-day명
+    input#name(type='text', placeholder='write d-day name')
+    |       d-day 날짜
+    input#year(type='text', placeholder='write year')
+    | year
+    input#month(type='text', placeholder='write month')
+    | month
+    input#day(type='text', placeholder='write day')
+    | day
+    input#button(type='submit', value='입력')
+  ul.js-dDay
+  script(src='/scripts/dday.js')

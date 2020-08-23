@@ -12,7 +12,3 @@ img {
     display: grid; 
     grid-template-columns: 1fr 1fr;
 }
-@media(max-width: 800px){
-    .grid {display: block;}
-    h1 {border-bottom: none;}
-}

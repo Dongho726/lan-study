@@ -5,5 +5,5 @@
     "watch_options": {
         "followSymlinks": false
     },
-    "name": "YOUR_PM2_PROCESS_NAME"
+    "name": "ON Study"
 }
