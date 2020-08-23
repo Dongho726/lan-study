@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .lw-video
+    video
+    p.lw-host
+      span.lw-onAir.lw-onAir-disabled On Air
+      span 라이브스트리밍
+    p On Air 버튼을 클릭해 시작할 수 있습니다.
+  .lw-chat
+    .lw-chatlog
+    .lw-input
+      input.lw-input-text(type='text', placeholder='chat with others!')
+      button.lw-input-submit 전송
+  link(rel='stylesheet', type='text/css', href='/stylesheets/live-watch.css')

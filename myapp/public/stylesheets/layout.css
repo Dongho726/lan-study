@@ -47,11 +47,3 @@ section{
     flex: 1;
     overflow: hidden;
 }
-
-footer{
-    border: black 1px solid;
-    margin: 10px;
-}
-footer p{
-    margin: 5px;
-}

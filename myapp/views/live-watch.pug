@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .lw-video
+    video
+    p.lw-host
+      span.lw-onAir.lw-onAir-disabled On Air
+      span #{username}
+    p #{username}님 현재 오프라인
+  .lw-chat
+    .lw-chatlog
+    .lw-input
+      input.lw-input-text(type='text', placeholder='chat with others!')
+      button.lw-input-submit 전송
+  link(rel='stylesheet', type='text/css', href='/stylesheets/live-watch.css')
+  
+  
