@@ -10,6 +10,7 @@ const usersRouter = require('./routes/users');
 const chatRouter = require('./routes/chat');
 const streamRouter = require('./routes/stream');
 const liveRouter = require('./routes/live');
+const whitenoiseRouter = require('./routes/whitenoise');
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use('/users', usersRouter);
 app.use('/chat', chatRouter);
 app.use('/stream', streamRouter);
 app.use('/live', liveRouter);
+app.use('/whitenoise',whitenoiseRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
