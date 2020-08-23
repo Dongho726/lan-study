@@ -1,14 +1,23 @@
+.wh-title{
+    border-bottom: 4px dotted #ecb3bd;
+    padding: 10px;
+}
 a {
     color: black; 
     font-size: larger;
 }
 img {
     margin-top: 15px; 
-    width: 500px; 
-    height: 400px;
+    width: 90%;
+    height: 300px;
+    margin: 5px;
 }
-.none {margin: 0;}
-.grid {
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
+.soundbox{
+    width: 50%;
+    float: left;
+    cursor: pointer;
+}
+.soundbox p{
+    margin: 0;
+    font-weight: bold;
 }
