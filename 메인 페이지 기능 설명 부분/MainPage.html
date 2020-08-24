@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Study-welcome</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    
+    <!--토글 버튼 관련 스타일 태그-->
+    <style>
+        .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        vertical-align:middle;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {display:none;}
+
+        /* The slider */
+        .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+
+        .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+
+        input:checked + .slider {
+        background-color: greenyellow;
+        }
+
+        input:focus + .slider {
+        box-shadow: 0 0 1px greenyellow;
+        }
+
+        input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+        border-radius: 34px;
+        }
+
+        .slider.round:before {
+        border-radius: 50%;
+        }
+
+        p {
+            margin:0px;
+            display:inline-block;
+            font-size:15px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">
+    지금 당장 여러분의 공부에 불을 ON! 
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <p>OFF</p><p style="display:none;">ON STUDY</p><br>
+    오직 공부만을 위한 랜선 공부 웹 페이지, <span style="color: plum">ON STUDY</span>
+    </h2><br>
+
+    <!--공부랑 고양이 사진-->
+    <div style="margin: 15px; text-align: center;">
+    <img src="study and cat.gif" alt="no_image" />
+    </div>
+
+    <!--기능 설명 부분-->
+    <div style="margin-left:180px; margin-top: 20px">
+        <strong>&#128269; 기능 설명 &#128269;</strong><br><br>
+        
+        <strong> &#128204;Live</strong><br>
+        실시간 스트리밍과 채팅 기능으로 공부에 활력을 더해봐요!<br>
+        ▷실시간 스트리밍 기능<br>
+        -Watch란에 사용자 닉네임 입력 후 '->' 버튼 클릭 시 해당 사용자의 실시간 스트리밍 화면을 볼 수 있습니다.<br>
+        -Host 옆 '->' 버튼 클릭 시 직접 호스트가 되어 실시간 공부 스트리밍을 진행할 수 있습니다.<br>
+        ▷실시간 채팅 기능<br>
+        -특정 사용자의 실시간 스트리밍을 시청하며 공부에 동기 부여가 되는 말 등을 실시간으로 입력할 수 있습니다.<br><br>
+
+        <strong> &#128204;To Do List</strong><br>
+        오늘의 할 일을 작성하고 하나씩 체크해가는 기쁨을 누려봐요!<br>
+        ▷입력란에 Task 작성 후 Enter키를 누르면 To Do List에 할 일이 추가됩니다.<br>
+        ▷&#9989;를 누를 경우 Task가 Finished로 넘어갑니다.<br>
+        ▷&#10060;를 누를 경우 입력한 Task가 삭제됩니다.<br>
+        ▷&#9194;를 누를 경우 Finished로 넘어갔던 Task가 다시 할 일로 추가됩니다.<br><br>
+
+        <strong> &#128204;D-Day</strong><br>
+        중요한 일정이나 시험을 디데이 기능으로 기록해 잊지 말아요!<br>
+        ▷d-day명과 year, month, day 입력 시 해당 일정의 디데이가 추가됩니다.<br>
+        ▷&#10060;를 누를 경우 입력한 일정이 삭제됩니다.<br>
+        ▷입력 예시: year란에 '2020', month란에 '09', day란에 '1'<br>
+        &#128680;주의&#128680;: month란에 한 자리수 달 입력 시 '08'과 같이 작성해주시길 바랍니다.<br>
+        (month란에 '8'과 같이 입력 시 NaN 오류가 발생합니다.)<br><br>
+
+        <strong> &#128204;White Noise</strong><br>
+        백색소음, 학습 관련 뇌파소리와 함께라면 집중도 200% 상승!<br>
+        ▷공부하며 듣고 싶은 백색소음 혹은 뇌파소리 글씨나 이미지를 클릭하면 새로운 페이지에 영상 창이 열립니다.<br>
+        ▷출처:공부의 신 강성태 / 잠박사 Jambaksa<br><br><br> 
+
+        <strong>&#128101;Contributors&#128101;</strong><br>
+        인하대학교 SW동아리 IGRUS 소속<br>
+        ▷백윤재 (신소재공학과 20학번)<br>
+        ▷윤여선 (컴퓨터공학과 20학번)<br>
+        ▷허동호 (컴퓨터공학과 20학번)<br>
+        ▷허미림 (미디어커뮤니케이션학과 20학번)<br><br><br>
+
+        <h3>목표를, 꿈을 이루기 위해 오늘도 열심히 달리는 여러분을 응원해요.</h3>
+        <img src="응원.gif" alt="no_image" /><br><br><br>
+
+    </div>
+
+    <!--토글 버튼 관련 스크립트 태그-->
+    <script>
+        var check = $("input[type='checkbox']");
+        check.click(function(){
+	    $("p").toggle();
+        });
+    </script>
+</body>
+</html>
