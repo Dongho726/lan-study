@@ -1,0 +1,12 @@
+.lh-onAir{
+    padding: 2px;
+    margin-right: 10px;
+}
+.lh-onAir-disabled{
+    background-color: #929292;
+    color: #4E4E4E;
+}
+.lh-onAir-abled{
+    background-color: #FF7B7B;
+    color: red;
+}

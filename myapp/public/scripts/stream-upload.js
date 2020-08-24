@@ -9,15 +9,17 @@ function handleSuccess(stream){
     mediaRecorder.addEventListener('dataavailable', function(e) {
         if (e.data.size > 0) {
             // e.data = blob
-            fetch('/stream/upload',{
-                method:'POST',
-                body: e.data
-            }).then(function(res){
-                // do something
+            e.data.text().then(function(videodata){
+                console.log(videodata.length);
+                fetch('/stream/upload',{
+                    method:'POST',
+                    body: videodata,
+                    headers: { "Content-Type" : "multipart/form-data" }
+                });
             });
         }
     });
-    mediaRecorder.start(5000);
+    mediaRecorder.start(1000);
 }
 
 function init(){

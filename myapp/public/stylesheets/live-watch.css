@@ -33,15 +33,3 @@
     font-size: large;
     font-weight: bold;
 }
-.lw-onAir{
-    padding: 2px;
-    margin-right: 10px;
-}
-.lw-onAir-disabled{
-    background-color: #929292;
-    color: #4E4E4E;
-}
-.lw-onAir-abled{
-    background-color: #FF7B7B;
-    color: red;
-}
