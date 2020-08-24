@@ -1,4 +1,103 @@
 extends layout
 
 block content
-  p 임시로 만든 페이지
+  script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js')
+  h2(style='text-align: center;')
+    | 지금 당장 여러분의 공부에 불을 ON! 
+    label.switch
+      input(type='checkbox')
+      span.slider.round
+    p OFF
+    p(style='display:none;') ON STUDY
+    br
+    |     오직 공부만을 위한 랜선 공부 웹 페이지, 
+    span(style='color: plum') ON STUDY
+  br
+  // 공부랑 고양이 사진
+  div(style='margin: 15px; text-align: center;')
+    img(src='/img/study and cat.gif', alt='no_image')
+  // 기능 설명 부분
+  div(style='margin-left:50px; margin-top: 20px')
+    strong 🔍 기능 설명 🔍
+    br
+    br
+    strong  📌Live
+    br
+    |         실시간 스트리밍과 채팅 기능으로 공부에 활력을 더해봐요!
+    br
+    |         ▷실시간 스트리밍 기능
+    br
+    |         -Watch란에 사용자 닉네임 입력 후 '->' 버튼 클릭 시 해당 사용자의 실시간 스트리밍 화면을 볼 수 있습니다.
+    br
+    |         -Host 옆 '->' 버튼 클릭 시 직접 호스트가 되어 실시간 공부 스트리밍을 진행할 수 있습니다.
+    br
+    |         ▷실시간 채팅 기능
+    br
+    |         -특정 사용자의 실시간 스트리밍을 시청하며 공부에 동기 부여가 되는 말 등을 실시간으로 입력할 수 있습니다.
+    br
+    br
+    strong  📌To Do List
+    br
+    |         오늘의 할 일을 작성하고 하나씩 체크해가는 기쁨을 누려봐요!
+    br
+    |         ▷입력란에 Task 작성 후 Enter키를 누르면 To Do List에 할 일이 추가됩니다.
+    br
+    |         ▷✅를 누를 경우 Task가 Finished로 넘어갑니다.
+    br
+    |         ▷❌를 누를 경우 입력한 Task가 삭제됩니다.
+    br
+    |         ▷⏪를 누를 경우 Finished로 넘어갔던 Task가 다시 할 일로 추가됩니다.
+    br
+    br
+    strong  📌D-Day
+    br
+    |         중요한 일정이나 시험을 디데이 기능으로 기록해 잊지 말아요!
+    br
+    |         ▷d-day명과 year, month, day 입력 시 해당 일정의 디데이가 추가됩니다.
+    br
+    |         ▷❌를 누를 경우 입력한 일정이 삭제됩니다.
+    br
+    |         ▷입력 예시: year란에 '2020', month란에 '09', day란에 '1'
+    br
+    |         🚨주의🚨: month란에 한 자리수 달 입력 시 '08'과 같이 작성해주시길 바랍니다.
+    br
+    |         (month란에 '8'과 같이 입력 시 NaN 오류가 발생합니다.)
+    br
+    br
+    strong  📌White Noise
+    br
+    |         백색소음, 학습 관련 뇌파소리와 함께라면 집중도 200% 상승!
+    br
+    |         ▷공부하며 듣고 싶은 백색소음 혹은 뇌파소리 글씨나 이미지를 클릭하면 새로운 페이지에 영상 창이 열립니다.
+    br
+    |         ▷출처:공부의 신 강성태 / 잠박사 Jambaksa
+    br
+    br
+    br
+    strong 👥Contributors👥
+    br
+    |         인하대학교 SW동아리 IGRUS 소속
+    br
+    |         ▷백윤재 (신소재공학과 20학번)
+    br
+    |         ▷윤여선 (컴퓨터공학과 20학번)
+    br
+    |         ▷허동호 (컴퓨터공학과 20학번)
+    br
+    |         ▷허미림 (미디어커뮤니케이션학과 20학번)
+    br
+    br
+    br
+    h3 목표를, 꿈을 이루기 위해 오늘도 열심히 달리는 여러분을 응원해요.
+    img(src='/img/응원.gif', alt='no_image')
+    br
+    br
+    br
+  // 토글 버튼 관련 스크립트 태그
+  script.
+    var check = $("input[type='checkbox']");
+    check.click(function(){
+    $("p").toggle();
+    });
+  link(rel='stylesheet', type='text/css', href='/stylesheets/index.css')
+  
