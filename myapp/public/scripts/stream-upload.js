@@ -9,23 +9,22 @@ function handleSuccess(stream){
     mediaRecorder.addEventListener('dataavailable', function(e) {
         if (e.data.size > 0) {
             // e.data = blob
-            e.data.text().then(function(videodata){
-                console.log(videodata.length);
-                fetch('/stream/upload',{
-                    method:'POST',
-                    body: videodata,
-                    headers: { "Content-Type" : "multipart/form-data" }
-                });
+            console.log('ok');
+            var fd = new FormData();
+            fd.append('video',e.data,Date.now());
+            fetch('/stream/upload',{
+                method: 'post',
+                body: fd
             });
+            mediaRecorder.stop();
         }
     });
-    mediaRecorder.start(1000);
+    mediaRecorder.start(5000);
 }
 
 function init(){
     navigator.mediaDevices.getUserMedia({ audio: true, video: true })
     .then(handleSuccess);
-
 }
 
 init();
