@@ -14,19 +14,33 @@ router.get('/',function(req,res){
   res.render('live-index');
 });
 router.get('/watch', function(req, res, next) {
-    con.query('SELECT * FROM auth WHERE username = ?',[req.query.username],
-  function(error, results){
-    if(results.length==0){
-        res.redirect('/live');
-    }else{
+  con.query('SELECT * FROM auth WHERE username = ?',[req.query.username],
+    function(error, results){
+      if(results.length==0){
+          res.redirect('/live');
+      }else{
         res.render('live-watch',{
-            username:req.query.username
+            username:req.query.username,
+            channel:results[0].id
         });
-    }
+      }
   });
 });
 router.get('/host',function(req,res){
-  res.render('live-host');
+  if(req.session.username){
+    con.query('SELECT * FROM auth WHERE username = ?',[req.session.username],
+    function(error, results){
+      if(results.length==0){
+          res.redirect('/live');
+      }else{
+        res.render('live-host',{
+            channel:results[0].id
+        });
+      }
+  });
+  }else{
+    res.redirect('/live');
+  }
 });
 
 module.exports = router;

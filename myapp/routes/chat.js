@@ -39,10 +39,9 @@ router.post('/update',function(req,res,next){
   });
 });
 router.post('/submit',function(req,res,next){
-  const userInfo = req.session.username || 'anoymous';
-  console.log(userInfo)
-
-  con.query('INSERT INTO chat (channel,username,content,time) VALUES (?,?,?,now())',
+  const userInfo = req.session.username;
+  if(userInfo){
+    con.query('INSERT INTO chat (channel,username,content,time) VALUES (?,?,?,now())',
   [req.body.channel,userInfo,req.body.content],
   function(error,results){
     if(error){
@@ -56,6 +55,11 @@ router.post('/submit',function(req,res,next){
       });
     }
   });
+  }else{
+    res.json({
+      submit: false
+    });
+  }
 });
 
 module.exports = router;
