@@ -1,15 +1,19 @@
 extends layout
 
 block content
-  form.js-loginForm
-    p Login
-    span.lg-err.hide 사용자 정보가 일치하지 않습니다.
-    br
-    input.lg-username(type='text' placeholder='username')
-    br
-    input.lg-password(type='password' placeholder='password')
-    br
-    button.lg-submit(type='button') 로그인
-  link(rel='stylesheet' type='text/css' href='/stylesheets/auth.css') 
-  script(src='/scripts/users-login.js')
+.grid
+  .box1
+    form.js-loginForm
+      h3 Login
+      span.lg-err.hide 사용자 정보가 일치하지 않습니다.
+      br
+      input.lg-username(type='text' placeholder='username')
+      br
+      input.lg-password(type='password' placeholder='password')
+      br
+      button.lg-submit(type='button') 로그인
+  .box2
+      img(src='/img/치즈덕1.jpg', alt='no_image')
+      link(rel='stylesheet' type='text/css' href='/stylesheets/auth.css') 
+      script(src='/scripts/users-login.js')
 
