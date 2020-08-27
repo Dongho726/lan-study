@@ -1,5 +1,3 @@
-const player = document.querySelector('.player');
-
 function handleSuccess(stream){
     const options = {
         mimeType: 'video/webm'
@@ -7,6 +5,7 @@ function handleSuccess(stream){
     const mediaRecorder = new MediaRecorder(stream,options);
 
     mediaRecorder.addEventListener('dataavailable', function(e) {
+        mediaRecorder.stop();
         if (e.data.size > 0) {
             // e.data = blob
             console.log('ok');

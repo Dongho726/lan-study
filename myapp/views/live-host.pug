@@ -2,7 +2,7 @@ extends layout
 
 block content
   .lw-video
-    video
+    video.lw-player(controls autoplay)
     p.lw-host
       span.lh-onAir.lh-onAir-disabled On Air
       span 라이브스트리밍
@@ -15,5 +15,6 @@ block content
       button.lw-input-submit 전송
   link(rel='stylesheet', type='text/css', href='/stylesheets/live-watch.css')
   link(rel='stylesheet', type='text/css', href='/stylesheets/live-host.css')
-  script(src='/scripts/live-host.js')
   script(src='/scripts/live-chat.js')
+  script(src='/scripts/live-host.js')
+  script(src='/scripts/live-watch.js')
