@@ -9,8 +9,10 @@ block content
   .lw-chat
     .lw-chatlog
     .lw-input
+      span.lw-input-channel(style='display:none;') #{channel}
       input.lw-input-text(type='text', placeholder='chat with others!')
       button.lw-input-submit 전송
   link(rel='stylesheet', type='text/css', href='/stylesheets/live-watch.css')
+  script(src='/scripts/live-chat.js')
   
   
