@@ -11,7 +11,7 @@
 button{
   background-color: white;
 }
-/*로그인 페이지 디자인*/
+/*로그인 및 회원가입 페이지 디자인*/
 img {
   width: 85%; 
   height: 85%;
@@ -40,4 +40,37 @@ img {
 .grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
+}
+/*'로그인' 버튼 디자인*/
+.lg-submit {
+  border: none;
+  color: white;
+  padding: 8px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #008CBA;
+}
+/*'확인', '취소' 버튼 디자인*/
+.rg-submit {
+  border: none;
+  color: white;
+  padding: 8px 13px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #008CBA;
+}
+.rg-cancel {
+  border: none;
+  color: black;
+  padding: 8px 13px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #e7e7e7;
 }

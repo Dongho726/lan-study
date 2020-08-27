@@ -1,7 +1,10 @@
 extends layout
 
 block content
-    form.js-registerForm
+.grid
+    .box1
+      form.js-registerForm
+        h3 Register
         input.rg-username(type='text', placeholder='username')
         span.rg-err.err-username-duplicated.hide 사용 중인 닉네임 입니다.
         span.rg-err.err-username-toomanychars.hide 20자 이하의 닉네임만 가능합니다.
@@ -14,5 +17,7 @@ block content
         br
         button.rg-submit.disabledBtn(type='button') 확인
         button.rg-cancel(type='button') 취소
+    .box2
+        img(src='/img/치즈덕2.png', alt='no_image')
     link(rel='stylesheet', type='text/css', href='/stylesheets/auth.css')
     script(src='/scripts/users-register.js')
