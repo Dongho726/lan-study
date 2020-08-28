@@ -6,7 +6,8 @@ const s3 = new aws.S3();
 const upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: 'onstudy'
+    bucket: 'onstudy',
+    acl: 'public-read'
   })
 }).single('video');
 const mysql = require('mysql');
